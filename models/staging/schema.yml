@@ -1,0 +1,39 @@
+
+version: 2
+
+sources:
+    - name: staging
+      database: dtc-de-379809
+      schema: data_all
+
+      tables:
+        - name: rank
+
+models:
+    - name: stg_rank
+      description: >
+        Trip made by green taxis, also known as boro taxis and street-hail liveries.
+        Green taxis may respond to street hails,but only in the areas indicated in green on the
+        map (i.e. above W 110 St/E 96th St in Manhattan and in the boroughs).
+        The records were collected and provided to the NYC Taxi and Limousine Commission (TLC) by
+        technology service providers. 
+      columns:
+        - name: rank_order
+          description: Integer that defines rank order.
+        - name: rank
+          description: University rank.
+        - name: name
+          description: Name of the University.
+        - name: scores_overall
+          description: Overall score
+        - name: scores_overall_rank
+          description: Rank of the University by overall score
+        - name: scores_teaching
+          description: Teaching score - learning environment score.
+        - name: scores_teaching_rank
+          description: Rank of the University by teaching score
+        - name: closed
+          description: Emply field
+          tests:
+            - not_null:
+                severity: warn

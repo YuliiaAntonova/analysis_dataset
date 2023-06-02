@@ -22,7 +22,7 @@ This project has the goal of answering the following questions:
 
 * Dbt models:
 
-    1. [stg_crashes](./dbt_nyc_mvc/models/staging/stg_rank.sql): selects a subset of columns from the raw table that was loaded into BigQuery, sorted records by rank.
+    1. [stg_crashes](./models/staging/stg_rank.sql): selects a subset of columns from the raw table that was loaded into BigQuery, sorted records by rank.
 
 ### Technologies
 

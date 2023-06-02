@@ -23,7 +23,11 @@ This project has the goal of answering the following questions:
 * Dbt models:
 
     1. [stg_crashes](./models/staging/stg_rank.sql): selects a subset of columns from the raw table that was loaded into BigQuery, sorted records by rank.
+ 
+* Spark:
 
+    1. [spark_rank](./workflows/spark_rank.ipynb): reads 10 years of university ranking data and predicts 2023 university rankings using the historical data of 2013-2023. 
+    
 ### Technologies
 
 * [Pandas](https://pandas.pydata.org/) for fetching the dataset from the API endpoint.
